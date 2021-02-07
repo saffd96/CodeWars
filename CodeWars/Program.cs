@@ -153,14 +153,20 @@ namespace CodeWars
                 string nums = n.ToString();
                 string squareString = null;
 
-                for (int i =0; i<nums.Length; i++)
+                for (int i = 0; i < nums.Length; i++)
                 {
-                    int num =  int.Parse(nums[i].ToString());
+                    int num = int.Parse(nums[i].ToString());
                     squareString += num * num;
                 }
 
                 return Int32.Parse(squareString);
             }
+            bool IsSquare(int n)
+            {
+                if (n == (int)Math.Sqrt(n) * (int)Math.Sqrt(n)) { return true; }
+                else { return false; }
+            }
+            Console.WriteLine(IsSquare(3));
         }
     }
 }
