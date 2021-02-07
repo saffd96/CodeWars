@@ -148,6 +148,19 @@ namespace CodeWars
                 if (resultString == null) { return ""; }
                 return resultString;
             }
+            int SquareDigits(int n)
+            {
+                string nums = n.ToString();
+                string squareString = null;
+
+                for (int i =0; i<nums.Length; i++)
+                {
+                    int num =  int.Parse(nums[i].ToString());
+                    squareString += num * num;
+                }
+
+                return Int32.Parse(squareString);
+            }
         }
     }
 }
