@@ -52,38 +52,6 @@ namespace CodeWars
                 Console.WriteLine(text);
                 return text;
             }
-            double basicOp(char operation, double value1, double value2)
-            {
-                double result = 0;
-                switch (operation)
-                {
-                    case '+':
-                        result = value1 + value2;
-                        break;
-                }
-                switch (operation)
-                {
-                    case '-':
-                        result = value1 - value2;
-                        break;
-
-                }
-                switch (operation)
-                {
-                    case '*':
-                        result = value1 * value2;
-                        break;
-
-                }
-                switch (operation)
-                {
-                    case '/':
-                        result = value1 / value2;
-                        break;
-
-                }
-                return result;
-            }
             int DescendingOrder(int num)
             {
                 string result = null;
