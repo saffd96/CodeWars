@@ -166,7 +166,16 @@ namespace CodeWars
                 if (n == (int)Math.Sqrt(n) * (int)Math.Sqrt(n)) { return true; }
                 else { return false; }
             }
-            Console.WriteLine(IsSquare(3));
+            string seriesSum(int n)
+            {
+                decimal result = 0.00m;
+                for (decimal i = 0; i < n; i++)
+                {
+                    result += 1 / (1 + 3 * i);
+                }
+                return Math.Round(result, 2).ToString();
+            }
+            Console.WriteLine(seriesSum(98));
         }
     }
 }
