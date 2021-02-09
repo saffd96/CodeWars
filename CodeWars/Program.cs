@@ -175,7 +175,38 @@ namespace CodeWars
                 }
                 return Math.Round(result, 2).ToString();
             }
-            Console.WriteLine(seriesSum(98));
+            int Number(List<int[]> peopleListInOut)
+            {
+                int result = 0;
+
+                foreach (int[] arr in peopleListInOut)
+                {
+                    result += arr[0];
+                    result -= arr[1];
+                }
+
+                return result;
+            }
+            string Accum(string s)
+            {
+                string result = string.Empty;
+                s = s.ToUpper();
+
+                for (int i=0; i<s.Length;i++)
+                {
+                    result += s[i];
+                    for (int u = 0; u<i;u++)
+                    {
+                        result += s[i].ToString().ToLower();
+                    }
+                    if (s[i] != s.Last()) { result += "-"; }
+                }
+
+                return result;
+            }
+
+
+            Console.WriteLine(Accum("ZpglnRxqenU"));
         }
     }
 }
